@@ -1,0 +1,68 @@
+body.dark-theme {
+    background: #181818;
+    color: #f1f1f1;
+}
+
+.dark-theme .topnav {
+    background-color: #222 !important;
+}
+
+.dark-theme a,
+.dark-theme .topnav a {
+    color: #f1f1f1 !important;
+}
+
+.dark-theme .header1,
+.dark-theme .header2 {
+    color: #f1f1f1;
+}
+
+.dark-theme .profile-pic {
+    border: 2px solid #f1f1f1;
+}
+
+/* Theme Toggle Button Styles */
+.theme-toggle-btn {
+    height: 100%;
+    width: 44px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    margin-right: 10px;
+    transition: background 0.2s;
+    color: inherit;
+}
+
+.topnav .theme-toggle-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+/* Toggle button background based on current theme */
+/*body.dark-theme .theme-toggle-btn {
+    background: #222;
+    color: #f1f1f1;
+}
+
+body:not(.dark-theme) .theme-toggle-btn {
+    background: #f8f9fa;
+    color: #222;
+} */
+
+/* Flexbox wrapper for theme toggle button */
+.theme-toggle-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 52px;
+}
+
+/* Prevent white flash in dark mode before JS loads */
+.dark-theme-preload,
+.dark-theme-preload body {
+    background: #181818 !important;
+    color: #f1f1f1 !important;
+}
