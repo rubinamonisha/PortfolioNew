@@ -1,11 +1,11 @@
 // This script loads profile data from profileData.json and injects it into #parentDiv
 fetch('profileData.json')
-    .then(response => response.json())
-    .then(data => {
-        const parentDiv = document.getElementById('parentDiv');
-        if (!parentDiv) return;
-        // Profile Header
-        let html = `
+  .then(response => response.json())
+  .then(data => {
+    const parentDiv = document.getElementById('parentDiv');
+    if (!parentDiv) return;
+    // Profile Header
+    let html = `
       <div class="flexbox-container">
         <div class="flexbox-container2">
           <h1 class="header1" id="home">${data.name}</h1>
@@ -31,44 +31,44 @@ fetch('profileData.json')
       </ul>
     `;
 
-        // Experience Section
-        if (data.experience && data.experience.length > 0) {
-            html += `<h4 id="experience">PROFESSIONAL EXPERIENCE</h4>`;
-            data.experience.forEach(exp => {
-                html += `<p><b>${exp.company}</b><br><b>${exp.role}</b></p>`;
-                if (exp.projects && exp.projects.length > 0) {
-                    exp.projects.forEach(proj => {
-                        html += `<p><b>${proj.name}</b>`;
-                        if (proj.techStack) html += `<br><b>Tech Stack:</b> ${proj.techStack}`;
-                        html += `</p>`;
-                    });
-                }
-                if (exp.responsibilities && exp.responsibilities.length > 0) {
-                    html += `<b>Roles:</b><ul>${exp.responsibilities.map(r => `<li>${r}</li>`).join('')}</ul>`;
-                }
-            });
+    // Experience Section
+    if (data.experience && data.experience.length > 0) {
+      html += `<h4 id="experience">PROFESSIONAL EXPERIENCE</h4>`;
+      data.experience.forEach(exp => {
+        html += `<p><b>${exp.company}</b><br><b>${exp.role}</b></p>`;
+        if (exp.projects && exp.projects.length > 0) {
+          exp.projects.forEach(proj => {
+            html += `<p><b>${proj.name}</b>`;
+            if (proj.techStack) html += `<br><b>Tech Stack:</b> ${proj.techStack}`;
+            html += `</p>`;
+          });
         }
-
-        // Education Section
-        if (data.education && data.education.length > 0) {
-            html += `<h4 id="education">EDUCATION</h4><ul>`;
-            data.education.forEach(edu => {
-                html += `<li><b>${edu.degree}</b><br><b>${edu.institution}</b> | ${edu.period}</li>`;
-            });
-            html += `</ul>`;
+        if (exp.responsibilities && exp.responsibilities.length > 0) {
+          html += `<b>Roles:</b><ul>${exp.responsibilities.map(r => `<li>${r}</li>`).join('')}</ul>`;
         }
+      });
+    }
 
-        // Projects Section
-        if (data.projects && data.projects.length > 0) {
-            html += `<h4 id="projects">PROJECTS</h4><ul>`;
-            data.projects.forEach(proj => {
-                html += `<li><b>${proj.name}</b> - ${proj.description}`;
-                if (proj.techStack) html += `<br><b>Tech Stack:</b> ${proj.techStack}`;
-                if (proj.link) html += `<br><a href="${proj.link}">${proj.link}</a>`;
-                html += `</li>`;
-            });
-            html += `</ul>`;
-        }
+    // Education Section
+    if (data.education && data.education.length > 0) {
+      html += `<h4 id="education">EDUCATION</h4><ul>`;
+      data.education.forEach(edu => {
+        html += `<li><b>${edu.degree}</b><br><b>${edu.institution}</b> | ${edu.period}</li>`;
+      });
+      html += `</ul>`;
+    }
 
-        parentDiv.innerHTML = html;
-    });
+    // Projects Section
+    if (data.projects && data.projects.length > 0) {
+      html += `<h4 id="projects">PROJECTS</h4><ul>`;
+      data.projects.forEach(proj => {
+        html += `<li><b>${proj.name}</b> - ${proj.description}`;
+        if (proj.techStack) html += `<br><b>Tech Stack:</b> ${proj.techStack}`;
+        if (proj.link) html += `<br><a href="${proj.link}">${proj.link}</a>`;
+        html += `</li>`;
+      });
+      html += `</ul>`;
+    }
+
+    parentDiv.innerHTML = html;
+  });

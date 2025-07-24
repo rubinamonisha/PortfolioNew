@@ -4,66 +4,65 @@
   "profileImage": "images/profilepic.JPG",
   "email": "rubinamonisha97@outlook.com",
   "phone": "+13653783832",
-  "location": { "city": "Toronto", "province": "Ontario" },
+  "location": {
+    "city": "Toronto",
+    "province": "Ontario"
+  },
   "github": "https://github.com/rubinamonisha",
   "linkedin": "https://www.linkedin.com/in/rubinamonisha ",
   "summary": "Passionate and results-oriented HR professional with over 5 years of experience and a proven track record in talent acquisition, employee relations, performance management, and organizational development. Have expertise in the entire HR life cycle with a background in IT product and service-based companies, implementing HR strategies that align with business goals and foster a positive work environment.",
   "skills": [
- 
     {
-      
-      "skills": [" full-cycle recruitment, including Advertising,sourcing, screening,shortlisting, interviewing, background verification, salary negotiation, offer presentation and onboarding candidates across junior, mid-level, senior, and executive positions."]
+      "skills": [
+        " full-cycle recruitment, including Advertising,sourcing, screening,shortlisting, interviewing, background verification, salary negotiation, offer presentation and onboarding candidates across junior, mid-level, senior, and executive positions."
+      ]
     },
     {
-     
-      "skills": ["Employee onboarding - Induction, orientation and joining formalities "]
+      "skills": [
+        "Employee onboarding - Induction, orientation and joining formalities "
+      ]
     },
     {
-      
-      "skills": ["HR Letters - offer, appointment, promotion, internal transfer, performance review, expeience, appraisal, relieving orders and termination"]
+      "skills": [
+        "HR Letters - offer, appointment, promotion, internal transfer, performance review, expeience, appraisal, relieving orders and termination"
+      ]
     },
     {
-      
-      "skills": ["Attendance and Leave Management "]
+      "skills": [
+        "Attendance and Leave Management "
+      ]
     },
     {
-      
-      "skills": ["HR and Company Policies "]
+      "skills": [
+        "HR and Company Policies "
+      ]
     },
     {
-      
-      "skills": ["Corporate Audit "]
+      "skills": [
+        "Corporate Audit "
+      ]
     },
     {
-      
-      "skills": ["Attendance and Leave Management "]
+      "skills": [
+        "Attendance and Leave Management "
+      ]
     }
   ],
   "experience": [
     {
       "company": "Capgemini - Toronto, Canada ",
       "role": "HR Executive |November 2024 - April 2025",
-      
-      
-
       "responsibilities": [
         "Managed the end-to-end recruitment cycle, coordinating with department managers to create job descriptions for all IT and non-IT roles based on their requirements. Conducted sourcing, screening, shortlisting, and interviewing through various job portals and internal references. ",
         "Assist with employee offboarding, ensuring proper equipment return and knowledge transfer.",
         "Handle staff consultation, grievance procedures, and response to employee questions and complaints. ",
-        
       ]
     },
-    
- 
-
-   "education": [
-    {
-      "degree": "BA Corporate Economics ",
-      "institution": "Women’s Christian College - Chennai, India",
-      "period": "June 2015 - April 2018"
-    }
-
-  ]
-  
-
-}
+    "education": [
+      {
+        "degree": "BA Corporate Economics ",
+        "institution": "Women’s Christian College - Chennai, India",
+        "period": "June 2015 - April 2018"
+      }
+    ]
+  }
