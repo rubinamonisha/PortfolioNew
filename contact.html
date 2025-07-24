@@ -8,31 +8,91 @@
         Contact
     </title>
     <link rel="stylesheet" href="style.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous"> -->
+
 </head>
+<link rel="stylesheet" href="theme.css">
+<script src="theme.js"></script>
 
 <body>
-    <ul class="topnav">
-        <li><a href="./index.html">Home</a></li>
-        <!-- <li><a href="#experience">Experience</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#projects">Projects</a></li> -->
-
-        <li class="right"><a class="active" href="./contact.html">Contact</a></li>
-        <li class="right"><a href="./about.html">About</a></li>
+    <!-- Top navigation for all links -->
+    <ul class="topNav top-mobile">
+        <li class="li-app-name">
+            <span class="app-name">Portfolio</span>
+        </li>
+        <li><a class="mobile-hidden" href="./index.html">Home</a></li>
+        <!-- <li class="mobile-hidden"><a href="#experience">Experience</a></li>
+        <li class="mobile-hidden"><a href="#education">Education</a></li>
+        <li class="mobile-hidden"><a href="#projects">Projects</a></li> -->
+        <li class="right theme-toggle-flex"><button id="themeToggleBtn" class="theme-toggle-btn">🌙</button></li>
+        <!-- <li class="mobile-hidden"><a href="./index2.html">HomeV2</a></li> -->
+        <li class="right mobile-hidden"><a class="active" href="./contact.html">Contact</a></li>
+        <li class="right mobile-hidden"><a href="./about.html">About</a></li>
     </ul>
 
+    <!-- Bottom navigation: only links with .bottom-mobile class are shown on mobile -->
+    <ul class="bottomNav">
+        <li class="bottom-mobile"><a href="./index.html">Home</a></li>
+        <li class="bottom-mobile"><a href="./about.html">About</a></li>
+        <li class="bottom-mobile"><a class="active" href="./contact.html">Contact</a></li>
+
+    </ul>
     <div id="parentDiv">
-        <h1> Rubina Monisha</h1>
-        <h2> Senior HR Executive</h2>
-        <img src="images/profilepic.JPG" alt="Profile Picture" width="200" height="200">
+        <div class="flexbox-container">
+            <div class="flexbox-container2">
+                <!-- inline styling - avoid and move styles to .CSS file instead -->
+                <h1 class="header1" id="home" style="padding: 0px 0px;"> RUBINA MONISHA</h1>
+                <h2 class="header2"> SENIOR HR EXECUTIVE</h2>
+            </div>
+            <div class="flexbox-container2">
+                <img class="profile-pic" src="images/profilepic.JPG" alt="Profile Picture" width="100" height="100">
+            </div>
+        </div>
         <h3>
-            <a href="mailto:rubinamonisha97@outlook.com">rubinamonisha97@outlook.com </a>
+            <a href="mailto:rubinamonisha97@outlook.com ">rubinamonisha97@outlook.com </a>
             <br>
             <a href="tel:+13653783832">+13653783832</a>
             <br>Toronto, Ontario
-            <br><a href="https://linkedin.com/in/rubinamonisha">https://linkedin.com/in/rubinamonisha </a>
+            <br><a href="https://github.com/rubinamonisha">https://github.com/rubinamonisha</a>
+            <br><a href="https://www.linkedin.com/in/rubinamonisha">https://www.linkedin.com/in/rubinamonisha</a>
         </h3>
+
+        <h2>Contact me:</h2>
+
+        <form action="/action_page.php">
+            <!-- <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" value="" placeholder="Enter your first name..."><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" value="" placeholder="Enter your last name..."><br><br> -->
+
+            <!-- <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="vehicle1"> I have a bike</label><br> -->
+
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" placeholder="Enter your name..." required><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="Enter your email..." required><br><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="40" placeholder="Enter your message..."
+                required></textarea><br><br>
+            <input type="submit" value="Send">
+
+        </form>
+
+        <!-- Google Map Embed for Toronto -->
+        <div class="map-container" style="margin-top: 32px; text-align: left;">
+            <h2>Location:</h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46244.96496496497!2d-79.639319!3d43.653225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34d6b6c7c7e1%3A0x2c6c7e1e6c7e1e6c!2sGreater%20Toronto%20Area!5e0!3m2!1sen!2sca!4v1620000000000!5m2!1sen!2sca"
+                width="100%" height="350" style="border:0; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
     </div>
+    <footer>
+        <p class="footer-content">&copy; 2024 Rubina Monisha. All rights reserved.</p>
+    </footer>
 </body>
 
 </html>

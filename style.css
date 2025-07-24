@@ -1,10 +1,81 @@
+/* Accent color variable */
+:root {
+    --accent-green: #04AA6D;
+}
+
+/* Import Roboto font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Prevent horizontal overflow on small screens */
+html,
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    word-break: break-word;
+    min-height: 100vh;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    line-height: 1.428;
+}
+
+html {
+    /* scroll-behavior: smooth;
+    scroll-padding-top: 90px; */
+}
+
+a {
+    color: #000000;
+}
+
+/* Responsive image scaling */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive container padding */
+#parentDiv {
+    box-sizing: border-box;
+    padding: 16px;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    /* Prevent #parentDiv from overlapping navbar */
+    margin-top: 60px;
+    min-height: 85vh;
+    padding: 28px 16px;
+}
+
+/* Responsive navigation */
+.topNav {
+    flex-wrap: wrap;
+    overflow-x: auto;
+}
+
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
     background-color: #f4f4f4;
 }
 
-ul.topnav {
+.li-app-name {
+    display: flex;
+}
+
+.app-name {
+    font-weight: 600;
+    font-size: 1.2em;
+    color: #04AA6D;
+    text-decoration: none;
+    padding: 0px 16px;
+    /* font-size: 22px; */
+    margin: auto;
+}
+
+ul.topNav,
+ul.bottomNav {
     position: fixed;
     width: 100%;
     top: 0px;
@@ -13,65 +84,285 @@ ul.topnav {
     padding: 0;
     overflow: hidden;
     background-color: #333;
-
-    /* border: 5px red solid;
-            border-width:3px; */
+    /* border: 5px red solid; */
+    border: none;
 }
 
-ul.topnav li {
+ul.topNav li {
     float: left;
+    height: 45px;
 }
 
-ul.topnav li a {
+ul.bottomNav li {
+    float: left;
+    height: 45px;
+}
+
+ul.topNav li a,
+ul.bottomNav li a {
     display: block;
-    color: white;
+    color: #fff;
     text-align: center;
-    padding: 14px 16px;
+    padding: 10px 16px;
     text-decoration: none;
+    font-weight: 500;
+    /* border-radius: 8px; */
+    /* transition: background 0.2s, color 0.2s; */
 }
 
-ul.topnav li a:hover:not(.active) {
+ul.topNav li a:hover:not(.active),
+ul.bottomNav li a:hover:not(.active) {
     background-color: #111;
 }
 
-ul.topnav li a.active {
-    background-color: #04AA6D;
+ul.topNav li a.active,
+ul.bottomNav li a.active {
+    /* background-color: #04AA6D; */
+    background-color: var(--accent-green);
+    /* font-weight: 600; */
 }
 
-ul.topnav li.right {
+ul.topNav li.right,
+ul.bottomNav li.right {
     float: right;
 }
 
-@media screen and (max-width: 600px) {
-
-    ul.topnav li.right,
-    ul.topnav li {
-        float: none;
-    }
-}
-
-h1 {
-    /* color: darkblue; */
+h1,
+h2,
+h4,
+.header2 {
+    color: var(--accent-green) !important;
     font-weight: bold;
-    /* font-size: 2em; */
-    /* text-align: left; */
+    margin: 0px;
 }
 
 .header2 {
     font-weight: bold;
+    margin: 0px;
     /* text-align: left; */
 }
 
-#parentDiv {
-    padding: 28px 16px;
+h3 {
+    font-weight: bold;
+    margin: 0px;
+    /* font-size: 16px !important;*/
+    /* font-size: var(--bs-body-font-size) !important; */
+    font-size: 1.2rem !important;
 }
 
-/* p.center {                      ctrl + /
-  text-align: center;
-  color: red;
+h4 {
+    font-size: 18px;
+}
+
+/* Card styling for accordion sections */
+.card {
+    /* background: #fff; */
+    border-radius: 5px;
+    box-shadow: 0 4px 24px rgba(238, 42, 123, 0.10), 0 1.5px 6px rgba(0, 0, 0, 0.04);
+    padding: 12px 10px;
+    margin-bottom: 20px;
+    border: 1.5px solid var(--accent-green);
+}
+
+/* Accordion content smooth animation */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accordion-content.open {
+    /* max-height will be set inline by JS to scrollHeight */
+}
+
+.accordion-toggle {
+    display: flex;
+    background: inherit;
+    border: 0px;
+    padding: 0px 0px;
+    text-align: left;
+}
+
+/* Accordion arrow styling */
+.accordion-arrow {
+    float: left;
+    font-size: 1.2em;
+    padding-right: 5px;
+    color: var(--accent-green);
+    transition: color 0.2s;
+}
+
+/* Center footer content and match #parentDiv padding */
+.footer-content {
+    text-align: center;
+    padding: 12px 12px;
+    margin: 0;
+    /* color: var(--text-color, #fff); */
+    font-size: 1rem;
+    /* background: linear-gradient(90deg, #f9ce34 0%, #ee2a7b 50%, #6228d7 100%);
+    color: #fff;
+    box-shadow: 0 -2px 16px rgba(238, 42, 123, 0.10);
+    letter-spacing: 0.02em; */
+}
+
+/* Instagram-inspired card container */
+.flexbox-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 32px 32px 24px 32px; */
+    /* margin-bottom: 32px; */
+    /* gap: 32px; */
+}
+
+.flexbox-container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* gap: 12px; */
+}
+
+/* Instagram-style profile image */
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 0 0 4px #ee2a7b, 0 2px 12px rgba(238, 42, 123, 0.10);
+    background: linear-gradient(135deg, #f9ce34 0%, #ee2a7b 50%, #6228d7 100%);
+}
+
+
+/* @media (min-width: 481px) and (max-width: 600px) {
+
+    ul.topNav li.right,
+    ul.topNav li {
+        float: left;
+    }
+
+    .flexbox-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .flexbox-container2 {
+        align-items: flex-start;
+    }
+
+    #parentDiv {
+        margin-top: 100px;
+    }
 } */
 
-/* h1, h2, p {
-  text-align: center;
-  color: red;
-} */
+
+/* Bottom navigation on mobile */
+@media only screen and (max-width: 480px) {
+    #parentDiv {
+        padding: 12px;
+    }
+
+    /* .header1,
+    .header2 {
+        font-size: 1.5em;
+        word-break: break-word;
+    } */
+
+    /* Code to make navbar items in separate rows */
+    /* ul.topNav li {
+        float: none;
+        display: block;
+        text-align: left;
+    } */
+
+    img {
+        width: 100%;
+        height: auto;
+        max-width: 200px;
+    }
+
+    .mobile-hidden {
+        display: none !important;
+    }
+
+    ul.bottomNav li.bottom-mobile {
+        display: inline-block !important;
+    }
+
+    ul.bottomNav li.bottom-mobile a {
+        display: block !important;
+        padding: 12px 8px;
+        font-size: 1rem;
+    }
+
+    ul.bottomNav {
+        position: fixed;
+        bottom: 0;
+        top: auto;
+        left: 0;
+        width: 100vw;
+        z-index: 1000;
+        border-top: 0px solid #000000;
+        border-bottom: 0px solid #000000;
+        /* box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.08); */
+        background-color: #333;
+
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        z-index: 1000;
+        background-color: #333;
+
+        /* border-top: 1px solid #ddd; */
+        /* box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.08); */
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    .bottomNav li {
+        flex: 1 1 0;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .bottomNav li a {
+        display: block;
+        color: white;
+        padding: 14px 0;
+        font-size: 1rem;
+        text-decoration: none;
+        border-right: 1px solid #222;
+    }
+
+    .bottomNav li:last-child a {
+        border-right: none;
+    }
+
+    .bottomNav li a.active {
+        background-color: #04AA6D;
+    }
+
+    .bottomNav li a:hover:not(.active) {
+        background-color: #111;
+    }
+
+    #parentDiv {
+        margin-top: 80px !important;
+        /* margin-bottom: 60px; */
+    }
+
+    footer {
+        margin-bottom: 60px;
+    }
+}
+
+@media only screen and (min-width: 481px) {
+    .bottomNav {
+        display: none !important;
+    }
+}

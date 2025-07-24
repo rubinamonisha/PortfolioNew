@@ -1,68 +1,83 @@
 {
-  "name": "Rubina Monisha",
-  "title": "Senior HR Executive",
-  "profileImage": "images/profilepic.JPG",
-  "email": "rubinamonisha97@outlook.com",
-  "phone": "+13653783832",
-  "location": {
-    "city": "Toronto",
-    "province": "Ontario"
-  },
-  "github": "https://github.com/rubinamonisha",
-  "linkedin": "https://www.linkedin.com/in/rubinamonisha ",
-  "summary": "Passionate and results-oriented HR professional with over 5 years of experience and a proven track record in talent acquisition, employee relations, performance management, and organizational development. Have expertise in the entire HR life cycle with a background in IT product and service-based companies, implementing HR strategies that align with business goals and foster a positive work environment.",
-  "skills": [
-    {
-      "skills": [
-        " full-cycle recruitment, including Advertising,sourcing, screening,shortlisting, interviewing, background verification, salary negotiation, offer presentation and onboarding candidates across junior, mid-level, senior, and executive positions."
-      ]
+    "name": "RUBINA MONISHA",
+    "title": "SENIOR HR EXECUTIVE",
+    "profileImage": "images/profilepic.JPG",
+    "email": "rubinamonisha97@outlook.com",
+    "phone": "+13653783832",
+    "location": {
+        "city": "Toronto",
+        "province": "Ontario"
     },
-    {
-      "skills": [
-        "Employee onboarding - Induction, orientation and joining formalities "
-      ]
-    },
-    {
-      "skills": [
-        "HR Letters - offer, appointment, promotion, internal transfer, performance review, expeience, appraisal, relieving orders and termination"
-      ]
-    },
-    {
-      "skills": [
-        "Attendance and Leave Management "
-      ]
-    },
-    {
-      "skills": [
-        "HR and Company Policies "
-      ]
-    },
-    {
-      "skills": [
-        "Corporate Audit "
-      ]
-    },
-    {
-      "skills": [
-        "Attendance and Leave Management "
-      ]
-    }
-  ],
-  "experience": [
-    {
-      "company": "Capgemini - Toronto, Canada ",
-      "role": "HR Executive |November 2024 - April 2025",
-      "responsibilities": [
-        "Managed the end-to-end recruitment cycle, coordinating with department managers to create job descriptions for all IT and non-IT roles based on their requirements. Conducted sourcing, screening, shortlisting, and interviewing through various job portals and internal references. ",
-        "Assist with employee offboarding, ensuring proper equipment return and knowledge transfer.",
-        "Handle staff consultation, grievance procedures, and response to employee questions and complaints. ",
-      ]
-    },
+    "github": "https://github.com/rubinamonisha",
+    "linkedin": "https://www.linkedin.com/in/rubinamonisha",
+    "summary": "Passionate and results-oriented HR professional with over 5 years of experience and a proven track record in talent acquisition, employee relations, performance management, and organizational development. Have expertise in the entire HR life cycle with a background in IT product and service-based companies, implementing HR strategies that align with business goals and foster a positive work environment. ",
+    "skills": [
+        {
+            "title": "Employee onboarding - Induction, orientation and joining formalities "
+        },
+        {
+            "title": "HR Letters - offer, appointment, promotion, internal transfer, performance review, experience, appraisal, relieving orders and termination "
+        },
+        {
+            "title": " Training and Performance Management "
+        },
+        {
+            "title": "Employee welfare and grievance Management "
+        },
+        {
+            "title": "Termination Process and offboarding "
+        }
+    ],
+    "experience": [
+        {
+            "companyName": "Capgemini ",
+            "city": "Toronto",
+            "country": "Canada",
+            "designation": "HR  | Executive",
+            "startDate": " November 2024",
+            "endDate": "April 2025 ",
+            "responsibilities": [
+                "Managed the end-to-end recruitment cycle, coordinating with department managers to create job descriptions for all IT and non-IT roles based on their requirements. Conducted sourcing, screening, shortlisting, and interviewing through various job portals and internal references",
+                "Maintain accurate records of employees and office equipment to support operational needs. .",
+                "Assist with employee offboarding, ensuring proper equipment return and knowledge transfer. ",
+                "Handle staff consultation, grievance procedures, and response to employee questions and complaints."
+            ]
+        },
+        {
+            "companyName": "Bright River",
+            "city": "Chennai",
+            "country": "India",
+            "designation": "Senior HR Executive",
+            "startDate": "March 2022",
+            "endDate": "August 2023",
+            "responsibilities": [
+                "Developed and executed HR policies in compliance with local labor laws.",
+                "Managed employee relations, resolving conflicts and fostering a positive workplace culture. ",
+                "Proficiently utilize the company's HRIS system to enter, manage and monitor pertinent HR-related information. ",
+                "Handle grievances by identifying and addressing anticipated issues, ensuring a comfortable stay for employees, and fostering a friendly atmosphere that encourages them to voice their opinions and problems. ",
+                "Manage exit processes by notifying the IT and Admin teams, ensuring employees leave with proper sendoffs, handing over necessary documents, completing exit interviews, and tracking asset and access details before exit."
+            ]
+        },
+        {
+            "companyName": "Infogenx",
+            "city": "Chennai",
+            "country": "India",
+            "designation": "HR - Executive",
+            "startDate": "June 2018",
+            "endDate": "May 2020",
+            "responsibilities": [
+                "Involved in the end-to-end recruitment cycle, coordinating with department managers to understand their requirements and prepare job descriptions with the support of hiring managers.",
+                "Collaborated with senior management to develop HR strategies that supported business objectives. "
+            ]
+        }
+    ],
     "education": [
-      {
-        "degree": "BA Corporate Economics ",
-        "institution": "Women’s Christian College - Chennai, India",
-        "period": "June 2015 - April 2018"
-      }
+        {
+            "degree": "BA Corporate Economics ",
+            "institutionName": "BA Corporate Economics ",
+            "province": "Tamil Nadu",
+            "country": "India",
+            "period": "May 2015 - April 2018"
+        }
     ]
-  }
+}

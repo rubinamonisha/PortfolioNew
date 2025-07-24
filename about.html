@@ -8,26 +8,60 @@
         About
     </title>
     <link rel="stylesheet" href="style.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous"> -->
+
 </head>
+<link rel="stylesheet" href="theme.css">
+<script src="theme.js"></script>
 
 <body>
-    <ul class="topnav">
-        <li><a href="./index.html">Home</a></li>
+    <!-- Top navigation for all links -->
+    <ul class="topNav top-mobile">
+        <li class="li-app-name">
+            <span class="app-name">Portfolio</span>
+        </li>
+        <li><a class="mobile-hidden" href="./index.html">Home</a></li>
         <!-- <li><a href="#experience">Experience</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#projects">Projects</a></li> -->
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li> -->
+        <li class="right theme-toggle-flex"><button id="themeToggleBtn" class="theme-toggle-btn">🌙</button></li>
+        <!-- <li class="mobile-hidden"><a href="./index2.html">HomeV2</a></li> -->
+        <li class="right mobile-hidden"><a href="./contact.html">Contact</a></li>
+        <li class="right mobile-hidden"><a class="active" href="./about.html">About</a></li>
+    </ul>
 
-        <li class="right"><a href="./contact.html">Contact</a></li>
-        <li class="right"><a class="active" href="./about.html">About</a></li>
+    <!-- Bottom navigation: only links with .bottom-mobile class are shown on mobile -->
+    <ul class="bottomNav">
+        <li class="bottom-mobile"><a href="./index.html">Home</a></li>
+        <li class="bottom-mobile"><a class="active" href="./about.html">About</a></li>
+        <li class="bottom-mobile"><a href="./contact.html">Contact</a></li>
     </ul>
 
     <div id="parentDiv">
-        <h1> Rubina Monisha</h1>
-
-
+        <div class="flexbox-container">
+            <div class="flexbox-container2">
+                <!-- inline styling - avoid and move styles to .CSS file instead -->
+                <h1 class="header1" id="home" style="padding: 0px 0px;"> RUBINA MONISHA</h1>
+                <h2 class="header2"> Senior HR Executive</h2>
+            </div>
+            <div class="flexbox-container2">
+                <img class="profile-pic" src="images/profilepic.JPG" alt="Profile Picture" width="100" height="100">
+            </div>
+        </div>
+        <h3>
+            <a href="mailto:rubinamonisha97@outlook.com ">rubinamonisha97@outlook.com </a>
+            <br>
+            <a href="tel:+13653783832">+13653783832</a>
+            <br>Toronto, Ontario
+            <br><a href="https://github.com/rubinamonisha">https://github.com/rubinamonisha</a>
+            <br><a href="https://www.linkedin.com/in/rubinamonisha ">https://www.linkedin.com/in/rubinamonisha</a>
+        </h3>
     </div>
 
-
+    <footer>
+        <p class="footer-content">&copy; 2024 Rubina Monisha. All rights reserved.</p>
+    </footer>
 </body>
 
 </html>
