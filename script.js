@@ -1,6 +1,6 @@
 // Smooth scroll with 100px offset for navbar links
 document.addEventListener('DOMContentLoaded', function () {
-    document.querySelectorAll('.topnav a[href^="#"]').forEach(function (link) {
+    document.querySelectorAll('.topNav a[href^="#"]').forEach(function (link) {
         link.addEventListener('click', function (e) {
             const targetId = this.getAttribute('href').replace('#', '');
             const target = document.getElementById(targetId);
