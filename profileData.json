@@ -21,7 +21,7 @@
     "summary": "Passionate and results-oriented HR professional with over 5 years of experience and a proven track record in talent acquisition, employee relations, performance management, and organizational development. Have expertise in the entire HR life cycle with a background in IT product and service-based companies, implementing HR strategies that align with business goals and foster a positive work environment. ",
     "technicalSkills": [
         {
-            "title": "Employee onboarding ",
+            "title": "Employee onboarding",
             "skills": [
                 "Induction",
                 "Orientation",
@@ -29,19 +29,29 @@
             ]
         },
         {
-            "title": "HR Letters - offer, appointment, promotion, internal transfer, performance review, experience, appraisal, relieving orders and termination ",
+            "title": "HR Letters",
+            "skills": [
+                "Offer Letters",
+                "Appointment Letters",
+                "Promotion Letters",
+                "Internal Transfer Letters",
+                "Performance Review Letters",
+                "Experience Certificates",
+                "Appraisal Letters",
+                "Relieving Orders",
+                "Termination Letters"
+            ]
+        },
+        {
+            "title": "Training and Performance Management",
             "skills": []
         },
         {
-            "title": "Training and Performance Management ",
+            "title": "Employee welfare and grievance Management",
             "skills": []
         },
         {
-            "title": "Employee welfare and grievance Management ",
-            "skills": []
-        },
-        {
-            "title": "Termination Process and offboarding ",
+            "title": "Termination Process and offboarding",
             "skills": []
         }
     ],
