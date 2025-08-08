@@ -1,6 +1,64 @@
 /* Accent color variable */
 :root {
-    --accent-green: #04AA6D;
+
+    /* --accent-color: #04AA6D; */
+    --accent-color: #1DB954;
+
+    /* --accent-green: #04AA6D; */
+    --accent-green: #1DB954;
+    /* --theme-background-color: #181818; */
+    --theme-background-color: #f4f4f4;
+    --theme-background-color-dark: #101010;
+
+    /* --body-bg: #f3f3f3;
+    --body-bg-dark: #101010; */
+
+    --modal-bg: rgba(0, 0, 0, 0.3);
+    --modal-content-bg: #fff;
+    --modal-bg-dark: rgba(0, 0, 0, 0.7);
+    --modal-content-bg-dark: #222;
+
+    --outline-border-radius: 8px;
+    --border-radius: 8px;
+    --layout-width: calc(100% - 100px);
+    --max-width: 1996px;
+
+    /* border-radius: var(--outline-border-raduis, var(--border-raduis)); */
+
+    --card-radius: var(--outline-border-radius, var(--border-radius));
+    --card-bg: #fff;
+    --card-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+    /* --card-shadow: 0 0px 0px rgba(0, 0, 0, 0.08); */
+
+    --card-shadow-dark: 0 2px 16px rgba(255, 255, 255, 0.08);
+    /* --card-shadow-dark: 0 0px 0px rgba(255, 255, 255, 0.08); */
+    /* --card-shadow-dark: 0 2px 16px rgba(249, 247, 247, 0.08); */
+    --card-shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.2), 0 4px 16px rgba(255, 255, 255, 0.08);
+    --card-shadow-dark-hover: 0 8px 20px rgba(255, 255, 255, 0.2), 0 4px 16px rgba(0, 0, 0, 0.08);
+    /* --card-bg-dark: #222; */
+    --card-bg-dark: #000000;
+    /* --card-bg-dark: #262626; */
+
+    --nav-bg: #fff;
+    --nav-text: #000000;
+    --nav-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
+    --nav-bg-dark: #000000 !important;
+    --nav-text-dark: #fff !important;
+    /* --nav-active-bg: #f3f3f3; */
+
+    /* --section-title: #222; */
+    /* --footer-bg: #fff; */
+    /* --footer-text: #222; */
+
+    --btn-bg: var(--accent-color);
+    --btn-text: #fff;
+    --btn-radius: 8px;
+    --btn-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+
+    --input-bg: #f9f9f9;
+    --input-border: #e5e5e5;
+    --input-radius: 8px;
+    --input-text: #222;
 }
 
 /* Import Roboto font from Google Fonts */
@@ -13,17 +71,30 @@ body {
     overflow-x: hidden;
     word-break: break-word;
     min-height: 100vh;
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-family: 'Roboto',
+        Arial,
+        Helvetica,
+        sans-serif;
     line-height: 1.428;
 }
 
-html {
-    /* scroll-behavior: smooth;
-    scroll-padding-top: 90px; */
-}
+/* html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px; 
+} */
 
 a {
     color: #000000;
+    text-decoration: none;
+    /* font-weight: 500; */
+    /* transition: color 0.2s; */
+}
+
+a:hover {
+    color: var(--accent-color);
+    /* transition: color 0.2s; */
+    /* color: var(--nav-text); */
+    text-decoration: underline;
 }
 
 /* Responsive image scaling */
@@ -38,20 +109,34 @@ img {
 /* Responsive container padding */
 #parentDiv {
     box-sizing: border-box;
-    padding: 16px;
-    width: 100%;
-    max-width: 900px;
+    /* padding: 16px; */
+    /* padding: 32px 16px; */
+    /* width: 100%; */
+    padding-bottom: 48px;
+    width: var(--layout-width);
+    max-width: var(--max-width);
+    /* max-width: 900px; */
+    /* max-width: 1200px; */
     margin: 0 auto;
     /* Prevent #parentDiv from overlapping navbar */
-    margin-top: 60px;
+    /* margin-top: 68px; */
+    /* margin-top: 80px; */
+    margin-top: 100px;
+
     min-height: 85vh;
-    padding: 28px 16px;
+    /* padding: 28px 16px; */
+    /* background: transparent; */
 }
 
 /* Responsive navigation */
 .topNav {
     flex-wrap: wrap;
     overflow-x: auto;
+    background: var(--nav-bg);
+    box-shadow: var(--nav-shadow);
+    padding: 0 24px;
+    /* height: 64px; */
+    /* z-index: 100; */
 }
 
 body {
@@ -67,11 +152,12 @@ body {
 .app-name {
     font-weight: 600;
     font-size: 1.2em;
-    color: #04AA6D;
+    /* color: #04AA6D; */
+    color: var(--accent-color) !important;
     text-decoration: none;
     padding: 0px 16px;
     /* font-size: 22px; */
-    margin: auto;
+    /* margin: auto; */
 }
 
 ul.topNav,
@@ -83,14 +169,24 @@ ul.bottomNav {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
-    /* border: 5px red solid; */
+    /* background-color: #333; */
+
+    background: var(--nav-bg);
+    color: var(--nav-text);
+    box-shadow: var(--nav-shadow);
+
+    /* border-radius: 16px 16px 0 0; */
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    z-index: 5;
     border: none;
 }
 
 ul.topNav li {
     float: left;
     height: 45px;
+    display: flex;
 }
 
 ul.bottomNav li {
@@ -101,26 +197,62 @@ ul.bottomNav li {
 ul.topNav li a,
 ul.bottomNav li a {
     display: block;
-    color: #fff;
+    /* display: flex; */
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    /* color: #fff; */
     text-align: center;
-    padding: 10px 16px;
+    /* padding: 0px 10px; */
     text-decoration: none;
-    font-weight: 500;
+    /* font-weight: 500; */
+    padding: 0px 16px;
+    font-size: 1.1em;
     /* border-radius: 8px; */
     /* transition: background 0.2s, color 0.2s; */
 }
 
+ul.topNav li a:hover,
+ul.topNav li button:hover,
+ul.bottomNav li a:hover {
+    /* background-color: #111; */
+    color: var(--accent-color);
+}
+
 ul.topNav li a:hover:not(.active),
 ul.bottomNav li a:hover:not(.active) {
-    background-color: #111;
+    /* background-color: #111; */
+    /* color: var(--accent-color); */
 }
 
 ul.topNav li a.active,
 ul.bottomNav li a.active {
+    /* background: var(--nav-active-bg); */
     /* background-color: #04AA6D; */
-    background-color: var(--accent-green);
-    /* font-weight: 600; */
+    /* background-color: var(--accent-color); */
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 3px;
+    text-decoration-color: var(--accent-color);
+    color: var(--accent-color);
+    font-weight: 700;
+    /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); */
+    /* position: relative;
+    text-decoration: none; */
 }
+
+/* ul.topNav li a.active::after,
+ul.bottomNav li a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 8px);
+    height: 3px;
+    background: var(--accent-color) !important;
+    border-radius: 8px !important;
+} */
 
 ul.topNav li.right,
 ul.bottomNav li.right {
@@ -131,8 +263,8 @@ h1,
 h2,
 h4,
 .header2 {
-    color: var(--accent-green) !important;
-    font-weight: bold;
+    color: var(--accent-color) !important;
+    /* font-weight: bold; */
     margin: 0px;
 }
 
@@ -147,7 +279,7 @@ h3 {
     margin: 0px;
     /* font-size: 16px !important;*/
     /* font-size: var(--bs-body-font-size) !important; */
-    font-size: 1.2rem !important;
+    font-size: 1.1rem !important;
 }
 
 h4 {
@@ -156,12 +288,24 @@ h4 {
 
 /* Card styling for accordion sections */
 .card {
-    /* background: #fff; */
+    background: var(--card-bg);
+    border-radius: var(--card-radius);
+    box-shadow: var(--card-shadow);
+    padding: 12px 12px;
+    margin-bottom: 12px;
     border-radius: 5px;
-    box-shadow: 0 4px 24px rgba(238, 42, 123, 0.10), 0 1.5px 6px rgba(0, 0, 0, 0.04);
+    /* box-shadow: 0 4px 24px rgba(238, 42, 123, 0.10), 0 1.5px 6px rgba(0, 0, 0, 0.04);
     padding: 12px 10px;
-    margin-bottom: 20px;
-    border: 1.5px solid var(--accent-green);
+    margin-bottom: 20px; */
+    /* border: 1.5px solid var(--accent-color); */
+    border: none;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.card:hover {
+    /* box-shadow: 0 4px 32px rgba(0, 0, 0, 0.12); */
+    box-shadow: var(--card-shadow-hover);
+    /* transform: translateY(-2px) scale(1.000001); */
 }
 
 /* Accordion content smooth animation */
@@ -188,21 +332,21 @@ h4 {
     float: left;
     font-size: 1.2em;
     padding-right: 5px;
-    color: var(--accent-green);
+    color: var(--accent-color);
     transition: color 0.2s;
 }
 
 /* Center footer content and match #parentDiv padding */
 .footer-content {
     text-align: center;
-    padding: 12px 12px;
+    /* padding: 12px 12px; */
+    padding: 24px 12px;
     margin: 0;
-    /* color: var(--text-color, #fff); */
-    font-size: 1rem;
-    /* background: linear-gradient(90deg, #f9ce34 0%, #ee2a7b 50%, #6228d7 100%);
-    color: #fff;
-    box-shadow: 0 -2px 16px rgba(238, 42, 123, 0.10);
-    letter-spacing: 0.02em; */
+    /* background: var(--footer-bg); */
+    /* color: var(--footer-text); */
+    font-size: 1.1rem;
+    box-shadow: 0 -1px 8px rgba(0, 0, 0, 0.04);
+    /* border-radius: 0 0 16px 16px; */
 }
 
 /* Instagram-inspired card container */
@@ -229,10 +373,16 @@ h4 {
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid #fff;
-    box-shadow: 0 0 0 4px #ee2a7b, 0 2px 12px rgba(238, 42, 123, 0.10);
-    background: linear-gradient(135deg, #f9ce34 0%, #ee2a7b 50%, #6228d7 100%);
-}
+    /* Instagram-style */
+    /* box-shadow: 0 0 0 4px #ee2a7b, 0 2px 12px rgba(238, 42, 123, 0.10);
+    background: linear-gradient(135deg, #f9ce34 0%, #ee2a7b 50%, #6228d7 100%); */
+    /* Green-style */
+    /* box-shadow: 0 0 0 4px #04AA6D, 0 2px 12px rgba(4, 170, 109, 0.10);
+    background: linear-gradient(135deg, #f9ce34 0%, #04AA6D 50%, #6228d7 100%); */
 
+    box-shadow: 0 0 0 4px var(--accent-color), 0 2px 12px rgba(4, 170, 109, 0.10);
+    background: linear-gradient(135deg, #f9ce34 0%, var(--accent-color) 50%, #6228d7 100%);
+}
 
 /* @media (min-width: 481px) and (max-width: 600px) {
 
@@ -260,6 +410,7 @@ h4 {
 @media only screen and (max-width: 480px) {
     #parentDiv {
         padding: 12px;
+        width: calc(100% - 24px);
     }
 
     /* .header1,
@@ -286,12 +437,13 @@ h4 {
     }
 
     ul.bottomNav li.bottom-mobile {
-        display: inline-block !important;
+        /* display: inline-block !important; */
+        display: flex !important;
+        /* justify-content: space-around; */
+        justify-content: center;
     }
 
     ul.bottomNav li.bottom-mobile a {
-        display: block !important;
-        padding: 12px 8px;
         font-size: 1rem;
     }
 
@@ -302,11 +454,7 @@ h4 {
         left: 0;
         width: 100vw;
         z-index: 1000;
-        border-top: 0px solid #000000;
-        border-bottom: 0px solid #000000;
-        /* box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.08); */
         background-color: #333;
-
         display: flex;
         justify-content: space-between;
         position: fixed;
@@ -314,7 +462,9 @@ h4 {
         left: 0;
         width: 100vw;
         z-index: 1000;
-        background-color: #333;
+        /* background-color: #333; */
+        background-color: var(--nav-bg);
+        color: var(--nav-text);
 
         /* border-top: 1px solid #ddd; */
         /* box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.08); */
@@ -332,27 +482,27 @@ h4 {
 
     .bottomNav li a {
         display: block;
-        color: white;
+        /* color: white; */
         padding: 14px 0;
         font-size: 1rem;
         text-decoration: none;
-        border-right: 1px solid #222;
+        /* border-right: 1px solid #222; */
     }
 
     .bottomNav li:last-child a {
         border-right: none;
     }
 
-    .bottomNav li a.active {
+    /* .bottomNav li a.active {
         background-color: #04AA6D;
     }
 
     .bottomNav li a:hover:not(.active) {
         background-color: #111;
-    }
+    } */
 
     #parentDiv {
-        margin-top: 80px !important;
+        margin-top: 85px !important;
         /* margin-bottom: 60px; */
     }
 
@@ -365,4 +515,147 @@ h4 {
     .bottomNav {
         display: none !important;
     }
+}
+
+
+/* Theme Toggle Button and other navbar button styles */
+.theme-toggle-btn,
+.download-btn,
+.accent-color-btn {
+    /* height: 100%; */
+    height: 44px;
+    min-width: 44px;
+    background: transparent;
+    /* background: var(--btn-bg); */
+    border: none;
+    color: var(--btn-text);
+    border-radius: var(--btn-radius);
+    box-shadow: var(--btn-shadow);
+    cursor: pointer;
+    font-size: 1.3em;
+    margin: 0px 4px;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+.theme-toggle-btn:hover,
+.download-btn:hover,
+.accent-color-btn:hover {
+    /* background: #222; */
+    background: var(--accent-color);
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    background: var(--input-bg);
+    border: 1px solid var(--input-border);
+    border-radius: var(--input-radius);
+    padding: 12px 16px;
+    font-size: 1.1em;
+    color: var(--input-text);
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    width: 100%;
+    transition: border 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: var(--accent-color);
+    outline: none;
+}
+
+/* Accent Color Picker Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--modal-bg, rgba(0, 0, 0, 0.3));
+    z-index: 99999;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: var(--modal-content-bg, #fff);
+    padding: 24px 32px;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    align-items: flex-start;
+}
+
+.modal-content label {
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+#accentColorPicker {
+    width: 48px;
+    height: 48px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#closeAccentModal {
+    margin-top: 18px;
+    padding: 6px 18px;
+    border-radius: 6px;
+    border: none;
+    background: var(--accent-color);
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.modal-section-title {
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+/* Accent Color Swatches Container */
+#accentColorSwatches {
+    display: flex;
+    gap: 10px;
+    margin: 0px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.accent-swatch {
+    /* width: 32px;
+    height: 32px;
+    border-radius: 50%; */
+    width: 48px;
+    height: 48px;
+    border-radius: 5px;
+    /* border: 2px solid #eee; */
+    border: 0px solid #ffffff;
+    outline: none;
+    cursor: pointer;
+    /* transition: border 0.2s, box-shadow 0.2s; */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    margin: 0;
+    padding: 0;
+}
+
+.accent-swatch:focus,
+.accent-swatch:hover {
+    /* border: 2px solid var(--accent-color); */
+    border: 2px solid #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.accordion-toggle {
+    cursor: pointer;
 }

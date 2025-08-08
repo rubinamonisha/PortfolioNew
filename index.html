@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        About
+        Rubina Monisha - Portfolio
     </title>
     <link rel="stylesheet" href="style.css">
     <!-- Comment out bootstrap link if not needed -->
@@ -22,13 +22,19 @@
     <ul class="topNav top-mobile">
         <!-- <li><a class="app-name" href="#">Portfolio</a></li> -->
         <li class="li-app-name">
-            <span class="app-name">Portfolio</span>
+            <a class="app-name" href="./index.html">Portfolio</a>
         </li>
         <li><a class="mobile-hidden active" href="#home">Home</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li class="right theme-toggle-flex"><button id="themeToggleBtn" class="theme-toggle-btn">🌙</button></li>
+
+        <li class="right theme-toggle-flex"><button id="themeToggleBtn" class="theme-toggle-btn"
+                title="Toggle Theme">🌙</button></li>
+        <li class="right color-picker-flex"><button id="accentColorBtn" class="accent-color-btn"
+                title="Select Accent Color">🎨</button></li>
+        <li class="right download-flex"><button id="downloadResumeBtn" class="download-btn"
+                title="Download Resume">📥</button></li>
         <!-- <li class="mobile-hidden"><a href="./index2.html">HomeV2</a></li> -->
         <li class="right mobile-hidden"><a href="./contact.html">Contact</a></li>
         <li class="right mobile-hidden"><a href="./about.html">About</a></li>
@@ -46,8 +52,33 @@
     <div id="parentDiv">
     </div>
     <footer>
-        <p class="footer-content">&copy; 2024 Rubina Monisha. All rights reserved.</p>
+        <p class="footer-content">&copy; 2024 Reo Jefton. All rights reserved.</p>
     </footer>
+
+    <!-- Accent Color Picker Modal -->
+    <div id="accentColorModal" class="modal">
+        <div class="modal-content">
+            <label for="accentColorPicker" class="modal-section-title">Select custom accent color</label>
+            <input type="color" id="accentColorPicker" />
+            <p class="modal-section-title">Accent colors</p>
+            <div id="accentColorSwatches">
+                <button class="accent-swatch" style="background:#F25050" title="#F25050"></button>
+                <button class="accent-swatch" style="background:#FFB900" title="#FFB900"></button>
+                <button class="accent-swatch" style="background:#FFD400" title="#FFD400"></button>
+                <button class="accent-swatch" style="background:#92C353" title="#92C353"></button>
+                <button class="accent-swatch" style="background:#1DB954" title="#1DB954"></button>
+                <button class="accent-swatch" style="background:#00B7C3" title="#00B7C3"></button>
+                <button class="accent-swatch" style="background:#0099BC" title="#0099BC"></button>
+                <button class="accent-swatch" style="background:#3A96DD" title="#3A96DD"></button>
+                <button class="accent-swatch" style="background:#8764B8" title="#8764B8"></button>
+                <button class="accent-swatch" style="background:#FF8C00" title="#FF8C00"></button>
+                <button class="accent-swatch" style="background:#E74856" title="#E74856"></button>
+                <button class="accent-swatch" style="background:#0078D7" title="#0078D7"></button>
+                <button class="accent-swatch" style="background:#7A7574" title="#7A7574"></button>
+            </div>
+            <button id="closeAccentModal">Close</button>
+        </div>
+    </div>
 </body>
 
 </html>

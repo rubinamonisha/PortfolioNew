@@ -1,34 +1,47 @@
 {
-    "name": "RUBINA MONISHA",
-    "title": "SENIOR HR EXECUTIVE",
+    "name": "Rubina Monisha",
+    "title": "Senior HR Executive",
     "profileImage": "images/profilepic.JPG",
-    "email": "rubinamonisha97@outlook.com",
-    "phone": "+13653783832",
+    "contact": {
+        "email": "rubinamonisha97@outlook.com",
+        "phone": "+13653783832",
+        "linkedin": "https://www.linkedin.com/in/rubinamonisha"
+    },
     "location": {
-        "city": "Toronto",
-        "province": "Ontario"
+        "current": {
+            "city": "Toronto",
+            "country": "Canada"
+        },
+        "previous": {
+            "city": "",
+            "country": ""
+        }
     },
     "github": "https://github.com/rubinamonisha",
-    "linkedin": "https://www.linkedin.com/in/rubinamonisha",
     "summary": "Passionate and results-oriented HR professional with over 5 years of experience and a proven track record in talent acquisition, employee relations, performance management, and organizational development. Have expertise in the entire HR life cycle with a background in IT product and service-based companies, implementing HR strategies that align with business goals and foster a positive work environment. ",
-    "skills": [
+    "technicalSkills": [
         {
-            "title": "Employee onboarding - Induction, orientation and joining formalities "
+            "title": "Employee onboarding - Induction, orientation and joining formalities ",
+            "skills": []
         },
         {
-            "title": "HR Letters - offer, appointment, promotion, internal transfer, performance review, experience, appraisal, relieving orders and termination "
+            "title": "HR Letters - offer, appointment, promotion, internal transfer, performance review, experience, appraisal, relieving orders and termination ",
+            "skills": []
         },
         {
-            "title": " Training and Performance Management "
+            "title": "Training and Performance Management ",
+            "skills": []
         },
         {
-            "title": "Employee welfare and grievance Management "
+            "title": "Employee welfare and grievance Management ",
+            "skills": []
         },
         {
-            "title": "Termination Process and offboarding "
+            "title": "Termination Process and offboarding ",
+            "skills": []
         }
     ],
-    "experience": [
+    "professionalExperience": [
         {
             "companyName": "Capgemini ",
             "city": "Toronto",
@@ -36,6 +49,7 @@
             "designation": "HR  | Executive",
             "startDate": " November 2024",
             "endDate": "April 2025 ",
+            "projects": [],
             "responsibilities": [
                 "Managed the end-to-end recruitment cycle, coordinating with department managers to create job descriptions for all IT and non-IT roles based on their requirements. Conducted sourcing, screening, shortlisting, and interviewing through various job portals and internal references",
                 "Maintain accurate records of employees and office equipment to support operational needs. .",
@@ -50,6 +64,7 @@
             "designation": "Senior HR Executive",
             "startDate": "March 2022",
             "endDate": "August 2023",
+            "projects": [],
             "responsibilities": [
                 "Developed and executed HR policies in compliance with local labor laws.",
                 "Managed employee relations, resolving conflicts and fostering a positive workplace culture. ",
@@ -65,6 +80,7 @@
             "designation": "HR - Executive",
             "startDate": "June 2018",
             "endDate": "May 2020",
+            "projects": [],
             "responsibilities": [
                 "Involved in the end-to-end recruitment cycle, coordinating with department managers to understand their requirements and prepare job descriptions with the support of hiring managers.",
                 "Collaborated with senior management to develop HR strategies that supported business objectives. "
@@ -79,5 +95,6 @@
             "country": "India",
             "period": "May 2015 - April 2018"
         }
-    ]
+    ],
+    "projects": []
 }

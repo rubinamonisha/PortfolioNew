@@ -1,16 +1,34 @@
 body.dark-theme {
-    background: #181818;
-    color: #f1f1f1;
+    /* background: #181818; */
+    background-color: var(--theme-background-color-dark);
+    color: #ffffff;
+}
+
+body.dark-theme .modal {
+    background: var(--modal-bg-dark, rgba(0, 0, 0, 0.3));
+}
+
+body.dark-theme .modal-content {
+    background: var(--modal-content-bg-dark, #fff);
 }
 
 .dark-theme .topnav {
-    background-color: #222 !important;
+    /* background-color: #222 !important; */
+    background-color: var(--nav-bg-dark) !important;
+    color: var(--nav-text-dark);
+    box-shadow: var(--nav-shadow-dark);
 }
 
 .dark-theme a,
 .dark-theme .topnav a {
-    color: #f1f1f1 !important;
+    color: #f1f1f1;
     /* color: var(--accent-green) !important; */
+}
+
+.dark-theme .bottomNav {
+    background-color: var(--nav-bg-dark) !important;
+    color: var(--nav-text-dark);
+    box-shadow: var(--nav-shadow-dark);
 }
 
 .dark-theme .header1,
@@ -26,26 +44,20 @@ body.dark-theme {
     border: 2px solid #f1f1f1;
 }
 
-/* Theme Toggle Button Styles */
-.theme-toggle-btn,
-.download-btn {
-    height: 100%;
-    /* width: 44px; */
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 1.5em;
-    /* margin: 5px; */
-    transition: background 0.2s;
-    color: inherit;
+.dark-theme .topNav {
+    background: var(--nav-bg-dark);
+    color: var(--nav-text-dark);
+    box-shadow: var(--nav-shadow-dark);
 }
 
-.topnav .theme-toggle-btn,
-.topnav .download-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
+.dark-theme .card {
+    background: var(--card-bg-dark);
+    /* color: var(--card-text-dark); */
+    box-shadow: var(--card-shadow-dark);
+}
+
+.dark-theme .card:hover {
+    box-shadow: var(--card-shadow-dark-hover);
 }
 
 /* Toggle button background based on current theme */
