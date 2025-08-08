@@ -30,8 +30,9 @@ fetch('profileData.json')
         </button>
         <div class="accordion-content open">
           <ul>
-            ${data.technicalSkills.map(skillCat => `
+            ${data.technicalSkills.map((skillCat, i, arr) => `
               <li><b>${skillCat.title} -</b> ${skillCat.skills.join(', ')}.</li>
+              ${i < arr.length - 1 ? '<hr>' : ''}
             `).join('')}
           </ul>
         </div>
@@ -46,7 +47,7 @@ fetch('profileData.json')
           <h4>Professional Experience</h4>
         </button>
         <div class="accordion-content open">`;
-      data.professionalExperience.forEach(exp => {
+      data.professionalExperience.forEach((exp, i, arr) => {
         html += `<p><b>${exp.companyName}</b> <span style="font-weight:400;">(${exp.city}, ${exp.country})</span><br>`;
         html += `<b>${exp.designation}</b> | <span>${exp.startDate} - ${exp.endDate}</span></p>`;
         if (exp.projects && exp.projects.length > 0) {
@@ -65,6 +66,7 @@ fetch('profileData.json')
         if (exp.responsibilities && exp.responsibilities.length > 0) {
           html += `<b>Roles:</b><ul>${exp.responsibilities.map(r => `<li>${r}</li>`).join('')}</ul>`;
         }
+        html += `${i < arr.length - 1 ? '<hr>' : ''}`;
       });
       html += `</div></section>`;
     }
@@ -77,8 +79,9 @@ fetch('profileData.json')
           <h4>Education</h4>
         </button>
         <div class="accordion-content open"><ul>`;
-      data.education.forEach(edu => {
+      data.education.forEach((edu, i, arr) => {
         html += `<li><b>${edu.degree}</b><br><b>${edu.institutionName}</b> <span style="font-weight:400;">(${edu.province}, ${edu.country})</span> | ${edu.period}</li>`;
+        html += `${i < arr.length - 1 ? '<hr>' : ''}`;
       });
       html += `</ul></div></section>`;
     }
@@ -91,7 +94,7 @@ fetch('profileData.json')
           <h4>Projects</h4>
         </button>
         <div class="accordion-content open"><ul>`;
-      data.projects.forEach(proj => {
+      data.projects.forEach((proj, i, arr) => {
         html += `<li><b>${proj.name}</b> - ${proj.description}`;
         if (Array.isArray(proj.techStack)) {
           html += `<br><b>Tech Stack:</b> ${proj.techStack.join(', ')}`;
@@ -100,6 +103,7 @@ fetch('profileData.json')
         }
         if (proj.link) html += `<br><a href="${proj.link}">${proj.link}</a>`;
         html += `</li>`;
+        html += `${i < arr.length - 1 ? '<hr>' : ''}`;
       });
       html += `</ul></div></section>`;
     }

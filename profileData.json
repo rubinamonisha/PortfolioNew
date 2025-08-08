@@ -21,8 +21,12 @@
     "summary": "Passionate and results-oriented HR professional with over 5 years of experience and a proven track record in talent acquisition, employee relations, performance management, and organizational development. Have expertise in the entire HR life cycle with a background in IT product and service-based companies, implementing HR strategies that align with business goals and foster a positive work environment. ",
     "technicalSkills": [
         {
-            "title": "Employee onboarding - Induction, orientation and joining formalities ",
-            "skills": []
+            "title": "Employee onboarding ",
+            "skills": [
+                "Induction",
+                "Orientation",
+                "Joining formalities"
+            ]
         },
         {
             "title": "HR Letters - offer, appointment, promotion, internal transfer, performance review, experience, appraisal, relieving orders and termination ",
@@ -93,7 +97,8 @@
             "institutionName": "BA Corporate Economics ",
             "province": "Tamil Nadu",
             "country": "India",
-            "period": "May 2015 - April 2018"
+            "startDate": "May 2015",
+            "endDate": "April 2018"
         }
     ],
     "projects": []
